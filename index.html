@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nails by Vicky 💅🏽</title>
+<style>
+  :root {
+    --pink: #f7b6cf;
+    --hot-pink: #e96b9b;
+    --cream: #fff8f3;
+    --brown: #3b2528;
+    --leopard: #2b1b1b;
+  }
+  * { box-sizing: border-box; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--brown);
+    background: var(--cream);
+  }
+  header {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+      radial-gradient(circle at 15% 20%, #ffffffaa 0 35px, transparent 36px),
+      radial-gradient(circle at 85% 70%, #ffffffaa 0 45px, transparent 46px),
+      linear-gradient(135deg, #fff8f3, #fbd0df 48%, #f7b6cf);
+    position: relative;
+    overflow: hidden;
+  }
+  header:before {
+    content: "🐆";
+    position: absolute;
+    font-size: 150px;
+    opacity: .10;
+    left: -20px;
+    top: 20px;
+    transform: rotate(-15deg);
+  }
+  header:after {
+    content: "🐆";
+    position: absolute;
+    font-size: 130px;
+    opacity: .10;
+    right: -10px;
+    bottom: 15px;
+    transform: rotate(12deg);
+  }
+  .hero { max-width: 760px; position: relative; z-index: 1; }
+  .eyebrow {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: clamp(54px, 10vw, 105px);
+    margin: 12px 0;
+    line-height: .95;
+    color: var(--brown);
+  }
+  .tagline {
+    font-size: 22px;
+    margin: 20px auto 30px;
+    max-width: 560px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 24px;
+    margin: 7px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px #8d526333; }
+  .primary { background: var(--hot-pink); color: white; }
+  .secondary { background: white; color: var(--brown); border: 2px solid var(--brown); }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff8f3ee;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e8c7d1;
+    text-align: center;
+    padding: 13px;
+  }
+  nav a {
+    color: var(--brown);
+    text-decoration: none;
+    margin: 0 14px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  section { padding: 75px 20px; max-width: 1050px; margin: auto; }
+  .section-title { text-align: center; font-size: 42px; margin: 0 0 12px; }
+  .section-subtitle { text-align: center; max-width: 620px; margin: 0 auto 40px; font-size: 18px; }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: white;
+    border: 1px solid #edd4dc;
+    border-radius: 24px;
+    padding: 27px;
+    text-align: center;
+    box-shadow: 0 8px 25px #7c4b5b12;
+  }
+  .card .emoji { font-size: 38px; }
+  .card h3 { margin: 13px 0 7px; font-size: 24px; }
+  .price { color: var(--hot-pink); font-weight: bold; font-size: 20px; }
+
+  .about {
+    background: #3b2528;
+    color: #fff8f3;
+    max-width: none;
+    padding: 75px 20px;
+  }
+  .about-inner { max-width: 850px; margin: auto; text-align: center; }
+  .about h2 { font-size: 42px; }
+  .about p { font-size: 19px; line-height: 1.7; }
+
+  .booking {
+    background: #fbd0df;
+    max-width: none;
+  }
+  .booking-inner { max-width: 800px; margin: auto; text-align: center; }
+  .contact-box {
+    background: white;
+    border-radius: 28px;
+    padding: 35px;
+    margin-top: 30px;
+  }
+  .contact-box p { font-family: Arial, sans-serif; }
+  footer {
+    background: #3b2528;
+    color: #fff8f3;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  .small { opacity: .8; font-size: 12px; }
+
+  .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .gallery-item { margin:0; background:white; border-radius:22px; overflow:hidden; border:1px solid #edd4dc; box-shadow:0 8px 25px #7c4b5b12; }
+  .gallery-item img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
+  .gallery-item figcaption { padding:12px 14px 15px; text-align:center; font-size:14px; }
+  @media (max-width:760px) { .gallery { grid-template-columns:repeat(2,1fr); gap:12px; } }
+  @media (max-width:430px) { .gallery { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div class="eyebrow">✨ Welcome to</div>
+    <h1>Nails by Vicky</h1>
+    <p class="tagline">Cute Gel-X sets, glossy gel manicures, pretty charms &amp; nail art made to match your vibe. 💅🏽🎀🐆</p>
+    <a class="btn primary" href="#booking">Book an Appointment</a>
+    <a class="btn secondary" href="#services">View Services</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#about">About</a>
+  <a href="#booking">Book</a>
+</nav>
+
+<section id="services">
+  <h2 class="section-title">Services 💗</h2>
+  <p class="section-subtitle">Choose your vibe and let's create a set you'll love!</p>
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">💅🏽</div>
+      <h3>Gel Manicure</h3>
+      <p>A glossy, cute gel polish manicure.</p>
+      <div class="price">$15</div>
+    </div>
+    <div class="card">
+      <div class="emoji">🎀</div>
+      <h3>Gel-X Set</h3>
+      <p>Custom Gel-X sets with your choice of shape, length &amp; style.</p>
+      <div class="price">$25–$35</div>
+    </div>
+    <div class="card">
+      <div class="emoji">✨</div>
+      <h3>Charms</h3>
+      <p>Up to 2 charms included. Additional charms are extra.</p>
+      <div class="price">+$2</div>
+    </div>
+    <div class="card">
+      <div class="emoji">🐆</div>
+      <h3>Nail Art</h3>
+      <p>Custom nail art is available and is priced depending on how detailed or intricate the design is.</p>
+      <div class="price">Varies</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="gallery">
+  <h2 class="section-title">Vicky's Nail Gallery ✨</h2>
+  <p class="section-subtitle">A few of my favorite sets 💅🏽🎀</p>
+  <div class="gallery">
+    <figure class="gallery-item"><img src="nails_by_vicky_01.png" alt="Orange and yellow detailed nail art"><figcaption>🍊 Bright &amp; colorful</figcaption></figure>
+    <figure class="gallery-item"><img src="nails_by_vicky_02.jpeg" alt="Blue gel manicure with nail art"><figcaption>💙 Blue &amp; detailed</figcaption></figure>
+    <figure class="gallery-item"><img src="nails_by_vicky_03.jpeg" alt="Blue and natural nail art"><figcaption>💙 Clean &amp; cute</figcaption></figure>
+    <figure class="gallery-item"><img src="nails_by_vicky_04.jpeg" alt="Colorful detailed nail set"><figcaption>✨ Custom nail art</figcaption></figure>
+    <figure class="gallery-item"><img src="nails_by_vicky_05.jpeg" alt="Pastel colorful nail art"><figcaption>🎀 Pastel details</figcaption></figure>
+    <figure class="gallery-item"><img src="nails_by_vicky_06.jpeg" alt="Pastel rainbow French tip nail set"><figcaption>🌈 Pastel rainbow tips</figcaption></figure>
+  </div>
+</section>
+
+<div class="about" id="about">
+  <div class="about-inner">
+    <h2>Meet Vicky 🎀</h2>
+    <p>
+      Hi! I'm Vicky, the nail artist behind Nails by Vicky in Lady Lake, FL.
+      I currently offer Gel-X sets and gel manicures, with cute charms and
+      custom nail art to make every set feel special. Thank you for supporting
+      my small business! 💕🐆
+    </p>
+  </div>
+</div>
+
+<section class="booking" id="booking">
+  <div class="booking-inner">
+    <h2 class="section-title">Let's Get You Booked! 💌</h2>
+    <p class="section-subtitle">
+      Ready for your next set? Use the buttons below to contact me and request an appointment.
+    </p>
+    <div class="contact-box">
+      <p><strong>📱 Instagram:</strong> @YOURINSTAGRAM</p>
+      <p><strong>📧 Email:</strong> nailsbyvicky678@gmail.com</p>
+      <p><strong>📍 Location:</strong> Lady Lake, FL</p>
+      <a class="btn primary" href="mailto:nailsbyvicky678@gmail.com">Email Me</a>
+      <a class="btn secondary" href="https://instagram.com/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>💅🏽 Nails by Vicky • Made with love 💗</div>
+  <div class="small">© 2026 Nails by Vicky</div>
+</footer>
+
+</body>
+</html>
